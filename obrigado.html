@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use Lavie</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
+    <link rel="shortcut icon" href="img/logo-dois.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+     <!----------header--------------->
+     <section class="header" id="header">
+        <a href="index.html"><img src="img/logo-dois.png" class="logo" alt="logo-lavie"></a>
+
+        <div>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Looks</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a class="active" href="contact.html">Contato</a></li>
+                <li id="lg-bag"><a onclick="vitrine.metodos.abrirCarrinho(true)">
+                        <span class="icon-bag">
+                            <div class="container-total-bag badge-total-bag hidden">0</div>
+                            <img src="./img/bag.png" alt="Ícone de carrinho">
+                        </span>
+                    </a></li>
+                <a id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div class="mobile" id="mobile">
+            <a onclick="vitrine.metodos.abrirCarrinho(true)">
+                <div class="container-total-bag badge-total-bag hidden">0</div>
+                <img src="./img/bag.png" width="35px" />
+            </a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+
+    <!----------obrigado----------->
+    <section class="obrigado">
+        <h2>Obrigada, fique de olho nas novidades!
+        </h2>
+        <a class="mt-2" href="index.html">
+            <button class="normal">Home</button>
+        </a>
+    </section>
+
+    <!----------footer-------------->
+    <footer class="section-p1">
+        <div class="col col-12 col-lg-3 col-md-6 col-sm-6">
+            <img class="logo" src="img/logo.png" alt="logo" />
+            <h4>Contato</h4>
+            <p><strong>Endereço:</strong> Av Quatorze, 40 Cuiabá - MT</p>
+            <p><strong>Telefone:</strong> 65 99274-1259</p>
+            <p><strong>Horário:</strong> 08:00 - 20:00, Seg - Seg</p>
+            <div class="follow">
+                <h4>Redes Sociais</h4>
+                <div class="icon">
+                    <a href="https://instagram.com/usela.vie?utm_source=qr" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5565992741259?text=Ol%C3%A1!%20vim%20atrav%C3%A9s%20do%20site"
+                        target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-6 col-lg-3 col-md-6 col-sm-6">
+            <h4>Sobre</h4>
+            <a href="about.html">Quem somos</a>
+            <a href="shop.html">Coleções</a>
+            <a href="contact.html">Fale conosco</a>
+        </div>
+
+        <div class="col col-6 col-lg-3 col-md-6 col-sm-6">
+            <h4>Minha conta</h4>
+            <a href="cart.html">Ver carrinho</a>
+            <a href="contact.html">Ajuda</a>
+        </div>
+
+        <div class="col col-12 col-lg-3 col-md-6 col-sm-6 install">
+            <h4>Gateways de pagamento seguros</h4>
+            <img src="img/pay/pay.png" />
+            <img src="img/pay/pay-dois.png" />
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2023 Use Lavie - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <div class="modal-full hidden" id="modalCarrinho">
+
+        <div class="m-header">
+            <div class="container">
+                <a class="btn btn-pink btn-sm float-right" onclick="vitrine.metodos.abrirCarrinho(false)">
+                    <b>Fechar</b>
+                </a>
+                <div class="etapas">
+                    <div class="etapa etapa1 active"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="etapa etapa2"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="etapa etapa3"><i class="fas fa-check"></i></div>
+                </div>
+                <p class="title-carrinho mt-4">
+                    <b id="lblTituloEtapa">Seu carrinho:</b>
+                </p>
+            </div>
+        </div>
+
+        <div class="m-body">
+            <div class="container">
+
+                <div id="itensCarrinho" class="row mr-0 ml-0 animated fadeIn ">
+                    
+                </div>
+
+                <div id="LocalEntrega" class="row mr-0 ml-0 animated fadeIn hidden">
+
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group container-cep">
+                            <label>CEP:</label>
+                            <input id="txtCEP" type="text" class="form-control" />
+                            <a class="btn btn-rose btn-sm" onclick="vitrine.metodos.buscarCep()">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-8 no-mobile"></div>
+
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Endereço:</label>
+                            <input id="txtEndereco" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label>Bairro:</label>
+                            <input id="txtBairro" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                        <div class="form-group">
+                            <label>Número:</label>
+                            <input id="txtNumero" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Cidade:</label>
+                            <input id="txtCidade" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label>Complemento:</label>
+                            <input id="txtComplemento" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                        <div class="form-group">
+                            <label>UF:</label>
+                            <select id="ddlUF" class="form-control">
+                                <option value="-1">...</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="resumoCarrinho" class="row mr-0 ml-0 animated fadeIn hidden">
+                    <div class="col-12 mt-4">
+                        <p class="title-carrinho">
+                            <b>Itens do pedido:</b>
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="row" id="listaItensResumo">
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4">
+                        <p class="title-carrinho">
+                            <b>Local da entrega:</b>
+                        </p>
+                    </div>
+
+                    <div class="col-12 item-carrinho resumo">
+                        <div class="img-map">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="dados-produto">
+                            <p class="texto-endereco">
+                                <b id="resumoEndereco"></b>
+                            </p>
+                            <p class="cidade-endereco" id="cidadeEndereco">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-footer">
+            <div class="container">
+                <div class="container-total text-right mb-2">
+                    <p class="mb-0">
+                        <span class="title-subtotal">Subtotal:</span>
+                        <span id="lblSubtotal">R$ 0,00</span>
+                    </p>
+                    <p class="mb-0 mt-0 texto-entrega">
+                        <span><i class="fa fa-motorcycle"></i>&nbsp; Entrega:</span>
+                        <span id="lblValorEntrega">+ R$ 5,00</span>
+                    </p>
+                    <p class="mb-0 texto-total">
+                        <span><b>Total:</b></span>
+                        <span class="valor-total"><b id="lblValorTotal">R$ 0,00</b></span>
+                    </p>
+                </div>
+
+                <a onclick="vitrine.metodos.carregarEndereco()" class="btn-rose float-right" id="btnEtapaPedido">
+                    Continuar
+                </a>
+
+                <a onclick="vitrine.metodos.resumoPedido()" class="btn-rose float-right hidden" id="btnEtapaEndereco">
+                    Revisar Pedido
+                </a>
+                <a href="#" class="btn-rose float-right hidden" id="btnEtapaResumo" target="_blank">
+                    Enviar Pedido
+                </a>
+
+                <a onclick="vitrine.metodos.voltarEtapa()" class="btn-white float-right mr-3 hidden" id="btnVoltar">
+                    Voltar
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript" src="./js/dados.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
+    <script>new WOW().init();</script>
+</body>
+</html>

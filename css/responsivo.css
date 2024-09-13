@@ -1,0 +1,413 @@
+@media (max-width: 801px) {
+    
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    .navbar.active{
+        right: 0px;
+    }
+
+    .navbar li{
+        margin-bottom: 25px;
+    }
+
+    .mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    .banner-one {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    .banner-one p{
+        font-size: 20px;
+        color: #1a1a1a;
+        font-weight: 500;
+    }
+
+    .feature {
+        justify-content: center;
+    }
+
+    .feature .fe-box {
+        margin: 15px 15px;
+    }
+
+    .product1 .pro-container {
+        justify-content: center;
+    }
+
+    .product1 .pro{
+        margin: 15px;
+    }
+
+    .banner{
+        height: 25vh;
+    }
+
+    .sm-banner .banner-box{
+        min-width: 100%;
+        height: 30vh;
+    }
+
+    .banner3 {
+        padding: 0 40px;
+    }
+
+    .banner3 .banner-box {
+        width: 28%;
+    }
+
+    .newsletter .form{
+        width: 70%;
+    }
+
+    /*Contact page*/
+    .form-details {
+        padding: 40px;
+    }
+
+    .form-details form{
+        width: 50%;
+    }
+
+    .container-menu{
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: flex;
+        padding-bottom: 15px;
+        padding-top: 30px;
+    }
+
+    .container-menu .btn-pink{
+        padding: 0;
+    }
+
+    .container-menu .btn-pink img{
+        width: 35px;
+        position: relative;
+    }
+
+    footer .col{
+        padding-bottom: 20px;
+    }
+
+    .page-header{
+        background-image: url('../img/banner/b1-copia.jpg');
+    }
+
+    .header .mobile .badge-total-bag{
+        right: 115px;
+        top: 18px;
+    }
+
+}
+
+@media (max-width: 477px) {
+
+    .logo {
+        width: 45px;
+    }
+
+    .section-p1 {
+        padding: 20px;
+    }
+
+    .header {
+        padding: 10px 30px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    .banner-one{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    .banner-one p{
+        font-size: 18px;
+    }
+
+    .feature {
+        justify-content: space-between;
+    }
+
+    .feature .fe-box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    .product1 .pro {
+        width: 100%;
+    }
+    
+    .banner {
+        height: 40vh;
+    }
+
+    .banner h2{
+        font-size: 23px;
+    }
+
+    .sm-banner .banner-box{
+        height: 40vh;
+    }
+
+    .sm-banner .banner-box2{
+        margin-top: 20px;
+    }
+
+    .sm-banner h2{
+        font-size: 20px;
+    }
+
+    .banner3 {
+        padding: 0 20px;
+    }
+
+    .banner3 .banner-box {
+        width: 100%;
+    }
+
+    .newsletter{
+        padding: 40px 20px;
+    }
+
+    .newsletter .form{
+        width: 100%;
+    }
+
+    footer .copyright{
+        padding-top: 20px;
+    }
+
+    footer .install img{
+        width: 150px;
+    }
+
+    .page-header p{
+        margin-top: -15px;
+        font-weight: bold;
+    }
+
+    .page-header h2{
+        margin-top: -50px;
+    }
+
+    /*About page*/
+    .about-head{
+        flex-direction: column;
+    }
+
+    .about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .about-head div{
+        padding-left: 0px;
+    }
+
+    .about-app .video{
+        width: 100%;
+    }
+
+    .about-app h1,
+    .about-app a {
+        font-size: 24px;
+    }
+
+    /*Detalhes do produto*/
+    .prodetails{
+        flex-direction: column;
+    }
+
+    .prodetails .detalhe{
+        display: grid;
+      }
+
+    .detalhe-carrinho{
+        display: grid;
+    }
+
+    .prodetails .single-pro-image{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .prodetails .single-pro-details{
+        width: 100%;
+    }
+
+    /*Contact page*/
+    .contact-details {
+        flex-direction: column;
+    }
+
+    .contact-details .details{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact-details .map{
+        width: 100%;
+    }
+
+    .form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    .form-details form{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    /*Cart page*/
+    .cart-add{
+        flex-direction: column;
+    }
+
+    .coupon{
+        width: 100%;
+    }
+
+    .subtotal{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cart-add h3{
+        padding-top: 15px;
+        font-size: 22px;
+    }
+
+    .header .mobile .badge-total-bag{
+        right: 65px;
+        top: 10px;
+    }
+
+    .modal-full{
+        padding: 40px;
+    }
+
+    .modal-full .container{
+        padding: 0!important;
+    }
+
+
+    .modal-full .item-carrinho{
+        padding-left: 0;
+        padding-right: 0;
+    }  
+
+    
+    .modal-full .img-produto{
+        position: relative;
+        left: 0;
+    }
+
+    .modal-full .img-produto img{
+        width: 50px;
+    }
+
+    .modal-full .dados-produto{
+        padding-left: 15px;
+        padding-right: 15px;
+        display: grid;
+    }
+
+    .modal-full .title-produto, .modal-full .price-produto{
+        font-size: 15px!important;
+    }
+
+    .modal-full .dados-produto .cor-produto,
+    .modal-full .dados-produto .tamanho-produto{
+        font-size: 12px;
+    }
+
+    .modal-full .add-numero-itens{
+        padding: 2px 7px;
+    }
+
+    .carrinho-add .add-numero-itens {
+        padding: 2px 7px;
+    }
+
+    .prodetails .single-pro-details select{
+        padding: 5px 15px;
+    }
+
+    .btn-mais {
+        padding: 2px 7px;
+    }
+
+    .btn-menos {
+        padding: 2px 7px;
+    }
+
+    .btn-rose{
+        padding: 15px 15px;
+    }
+
+    .btn-white {
+        padding: 15px 15px;
+    }
+
+    .modal-full .m-header .btn{
+        margin-top: 0!important;
+        font-size: 15px!important;
+    }
+
+    .no-mobile{
+        display: none;
+    }
+
+}
